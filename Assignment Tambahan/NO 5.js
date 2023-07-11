@@ -1,20 +1,19 @@
 const alpha = Array.from(Array(26)).map((e, i) => i + 97);
 const alphabet = alpha.map((x) => String.fromCharCode(x));
-console.log(alphabet)
 
-for(x=0;x<27;x++){
-  alphabet[x]=x+1
-}
-console.log(alphabet)
-nameValue("abu")
+console.log(nameValue("amirul anwar"))
 
-function nameValue(char name){
+function nameValue(name){
   let a=null
-  let b=name.split()
-  for(c=0,c<name.length();c++){
-    a=+b
+  let b=name.split("")
+
+  for(x=0; x<b.length; x++){
+    for(y=0; y<alphabet.length; y++){
+      if(name[x]==alphabet[y]){
+        a+=(y+1)
+      }
+    }
   }
   return a
 }
 
-console.log(a)
